@@ -8,8 +8,8 @@ let MockDynamo = {
         helper.set.bind(this);
         this.reset();
     },
+
     get: function(table, userId, callback) {
-        console.log("UserID: " + userId);
         let data = MockDynamo.userIdMap[userId];
         if (data === undefined || data === null || isEmptyObject(data)) {
             callback(null, {});
@@ -18,9 +18,11 @@ let MockDynamo = {
             callback(null, data.Item["mapAttr"]);
         }
     },
+
     reset: function () {
         MockDynamo.userIdMap = {};
     },
+
     set: function(table, userId, data, callback) {
         const parameters = {
             Item: {
@@ -29,9 +31,7 @@ let MockDynamo = {
             },
             TableName: table
         };
-
-        console.log("Set: " + data.STATE);
-
+        
         MockDynamo.userIdMap[userId] = parameters;
         callback(null, data);
 
