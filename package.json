@@ -1,0 +1,20 @@
+{
+  "name": "mock-alexa-dynamo",
+  "description": "Simple class to mock out Dynamo dependency, for unit tests",
+  "license": "SEE LICENSE IN LICENSE",
+  "private": false,
+  "version": "0.0.1",
+  "peerDependencies": {
+    "alexa-sdk": "^1.0.0"
+  },
+  "engines": {
+    "node": ">=4.8.6"
+  },
+  "files": [
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bespoken/mock-alexa-dynamo.git"
+  }
+}
