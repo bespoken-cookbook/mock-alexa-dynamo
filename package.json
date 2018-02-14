@@ -13,8 +13,19 @@
   "files": [
     "index.js"
   ],
+  "scripts": {
+    "test": "mocha tests/test.js"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/bespoken/mock-alexa-dynamo.git"
+  },
+  "dependencies": {
+    "mockery": "^2.1.0"
+  },
+  "devDependencies": {
+    "alexa-sdk": "^1.0.25",
+    "mocha": "^5.0.1",
+    "virtual-alexa": "^0.4.2"
   }
 }
