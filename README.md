@@ -31,3 +31,11 @@ mockDynamo.reset();
 
 Typically, this would be placed inside a `afterEach` method in a unit-test.
 
+## Example
+To see a full example, check out the Giftionary project:  
+[https://github.com/bespoken/giftionary](https://github.com/bespoken/giftionary)
+
+In particular, this test:  
+[https://github.com/bespoken/giftionary/blob/master/test/index.test.js](https://github.com/bespoken/giftionary/blob/master/test/index.test.js)
+
+
