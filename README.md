@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/bespoken/mock-alexa-dynamo.svg?branch=master)](https://travis-ci.org/bespoken/mock-alexa-dynamo)  
 # Mock Alexa Dynamo
 For users of the Alexa Node.js SDK.
 
