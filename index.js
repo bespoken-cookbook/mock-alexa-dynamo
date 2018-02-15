@@ -1,6 +1,23 @@
 const mockery = require("mockery");
 let MockDynamo = {
     enable: function() {
+        // Need to do special handling for Jest, because it does not play well with Mockery
+        if (typeof jest !== "undefined") {
+            this.enableJest();
+        } else {
+            this.enableMockery();
+        }
+    },
+
+    enableJest: function () {
+        jest.mock("alexa-sdk/lib/DynamoAttributesHelper", () => {
+            return function () {
+                return require("mock-alexa-dynamo");
+            }
+        });
+    },
+
+    enableMockery: function() {
         mockery.enable({
             useCleanCache: true,
             warnOnReplace: false,
