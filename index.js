@@ -10,9 +10,10 @@ let MockDynamo = {
     },
 
     enableJest: function () {
+        const self = this;
         jest.mock("alexa-sdk/lib/DynamoAttributesHelper", () => {
             return function () {
-                return require("mock-alexa-dynamo");
+                return self;
             }
         });
     },
