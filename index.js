@@ -36,7 +36,6 @@ let MockDynamo = {
         if (data === undefined || data === null || isEmptyObject(data)) {
             callback(null, {});
         } else {
-            console.log(data.Item["mapAttr"].STATE);
             callback(null, data.Item["mapAttr"]);
         }
     },
