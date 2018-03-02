@@ -3,7 +3,7 @@
   "description": "Simple class to mock out Dynamo dependency, for unit tests",
   "license": "SEE LICENSE IN LICENSE",
   "private": false,
-  "version": "0.2.3-0",
+  "version": "0.2.4-0",
   "peerDependencies": {
     "alexa-sdk": "^1.0.0"
   },
