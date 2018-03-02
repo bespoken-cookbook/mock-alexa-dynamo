@@ -5,8 +5,8 @@ let MockDynamo = {
         const helper = require("alexa-sdk/lib/DynamoAttributesHelper");
         console.log("AttributesHelper: " + helper.get);
         if (helper.get) {
-            dah.get = this.get;
-            dah.set = this.set;
+            helper.get = this.get;
+            helper.set = this.set;
             return;
         }
 
