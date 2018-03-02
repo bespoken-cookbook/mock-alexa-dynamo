@@ -1,4 +1,4 @@
-// const mockery = require("mockery");
+const mockery = require("mockery");
 
 let MockDynamo = {
     enable: function() {
