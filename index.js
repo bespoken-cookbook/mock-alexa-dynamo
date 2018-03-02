@@ -3,10 +3,14 @@
 let MockDynamo = {
     enable: function() {
         const helper = require("alexa-sdk/lib/DynamoAttributesHelper");
-        console.log("AttributesHelper: " + helper.get);
+        // Check if this is the old version of the dynamo attributes helper (which just returns an object)
+        // If so, we go ahead just replace the get and set as before
         if (helper.get) {
             helper.get = this.get;
+            helper.get.bind(this);
+
             helper.set = this.set;
+            helper.set.bind(this);
             return;
         }
 
